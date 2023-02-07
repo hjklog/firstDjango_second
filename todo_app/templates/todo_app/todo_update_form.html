@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Edit Todo</title>
+	<link rel="stylesheet" href="{% static 'todo_app/bootstrap/bootstrap.min.css' %}">
+</head>
+<body>
+	<h1>Edit Todos</h1>
+	<hr/>
+	<form method='post' enctype="multipart/form-data" action="">{% csrf_token %}
+		<table>
+			{{ form }}
+		</table>
+		<button type="submit" class="btn btn-primary float-right">Submit</button>
+	</form>
+</body>
+</html>
